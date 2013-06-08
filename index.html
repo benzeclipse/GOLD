@@ -31,6 +31,11 @@
 
 
 
+
+
+
+
+
 	<!-- First Page -->
 	<div data-role="page" id="home" data-filter="true">
 		
@@ -120,6 +125,122 @@
 	   </div>
 	</div>
 	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	<!-- NFL ticket page -->   
+	<div data-role="page" id="nfl" data-id="displayingData" data-add-back-btn="true"> 
+		
+		<div data-role="header" data-position="fixed" data-theme="c" >
+			<h1>Ticket Hub</h1>
+		</div>
+		
+		<div data-role="content">
+			<h3 align="middle"><p>NFL Tickets!</p><h3>
+		
+				<ul data-role="listview" > <!-- List View and data-filter smart search-->
+			
+				<li data-role="list-divider" data-theme="a">BROWSE NOW</li> <!-- Dividers -->
+				<li><a href="#error">	<!-- adding header and lower textview w/buttons-->
+					<h3>NFL Tickets</h3>	 
+				</a></li>
+	
+		</div>	
+  	 <div data-role="footer" data-position="fixed">
+      	  <div data-role="navbar" >
+      	  
+         	   <ul> 	  
+               	 <li><a href="#home" data-icon="home" data-theme="c">Home</a></li>
+               	 <li><a href="#links" data-icon="gear" data-theme="c">About Us</a></li>
+           	 </ul>
+       	 </div><!-- /navbar -->
+	</div><!-- /footer -->
+	   
+	</div>
+	
+
+
+
+
+
+
+	
+	
+	<!-- NBA ticket page -->   
+	<div data-role="page" id="nba" data-id="displayingData" data-add-back-btn="true"> 
+		
+	<div data-role="header" data-position="fixed" data-theme="a" >
+			<h1>Ticket Hub</h1>
+		</div>
+		
+		<div data-role="content">
+			<h3 align="middle"><p>NBA Tickets!</p><h3>
+		
+				<ul data-role="listview" > <!-- List View and data-filter smart search-->
+			
+				<li data-role="list-divider" data-theme="a">BROWSE NOW</li> <!-- Dividers -->
+				<li><a href="#error">	<!-- adding header and lower textview w/buttons-->
+					<h3>NBA Tickets</h3>	 
+				</a></li>
+	
+		</div>
+			
+  	 <div data-role="footer" data-position="fixed">
+      	  <div data-role="navbar">
+         	   <ul>
+              	  
+               	 <li><a href="#home" data-icon="home"  data-theme="a">Home</a></li>
+               	 <li><a href="#links" data-icon="gear">About Us</a></li>
+           	 </ul>
+       	 </div><!-- /navbar -->
+	</div><!-- /footer -->	   
+	</div>
+	
+	
+	
+	
+	
+	<!-- MBL ticket page -->   
+	<div data-role="page" id="mbl" data-id="displayingData" data-add-back-btn="true"> 
+		
+		<div data-role="header" data-position="fixed" data-theme="e" >
+			<h1>Ticket Hub</h1>
+		</div>
+		
+		<div data-role="content">
+			<h3 align="middle"><MLB Tickets!</p><h3>
+		
+				<ul data-role="listview" data-theme="e"> <!-- List View and data-filter smart search-->
+			
+				<li data-role="list-divider" data-theme="a">BROWSE NOW</li> <!-- Dividers -->
+				<li><a href="#error" >	<!-- adding header and lower textview w/buttons-->
+					<h3 >MLB Tickets</h3>	 
+				</a></li>
+	
+		</div>
+			
+  	 <div data-role="footer" data-position="fixed">
+      	  <div data-role="navbar">
+         	   <ul>
+              	  
+               	 <li><a href="#home" data-icon="home" data-theme="e">Home</a></li>
+               	 <li><a href="#links" data-icon="gear" data-theme="e">About Us</a></li>
+           	 </ul>
+       	 </div><!-- /navbar -->
+	</div><!-- /footer -->	   
+	</div>
+	
+	
+	
 	
 	
 	
@@ -151,6 +272,9 @@
 
 
 
+
+
+
 	<!-- About Us -->   
 	<div data-role="page" id="links" data-add-back-btn="true" > 
 		
@@ -163,9 +287,9 @@
 		</div>	
 		
 		<ul data-role="listview" data-inset="true">
-   			<li><a href="#">GOLD APP</a></li>
+   			<li><a href="http://benzeclipse.github.com/GOLD">GOLD APP</a></li>
    			<li><a href="#">BRONZE APP</a></li>
-   			<li><a href="#">GIT</a></li>
+   			<li><a href="https://github.com/benzeclipse/GOLD.git">GIT</a></li>
    			<li><a href="#contactUs">CONTACT US</a></li>
 		</ul>
 		
@@ -179,6 +303,8 @@
 	</div><!-- /footer -->
 	   
 	</div>
+
+
 
 
 
@@ -210,36 +336,26 @@
 	</div>
 
 
-	<!--Shop Ticket-->  
+
+
+
+
+
+   <!--Shop Tickets -->  
 	<div data-role="page" id="shopTicket" data-add-back-btn="true"> 		
 		<div data-role="header" data-position="fixed" data-theme="b" >
 			<h1>Ticket Hub</h1>
 		</div>	
 		<div data-role="content">
-			<p align="middle">Start Shopping</p>
+			<h1 align="middle"><p>Shop Tickets Now!</p><h1>
 		</div>
-		
-<!--	<ul data-role="listview" data-filter="true" data-filter-reveal="true" >
-    	 <li><a href="#error">NFL</a></li>
-   		 <li><a href="#error">NBA</a></li>
-    	 <li><a href="#error">NHL</a></li>
-    	 <li><a href="#error">MMA</a></li>
-   		 <li><a href="#error">GOLF</a></li>
-   		  <li><a href="#error">TENNIS</a></li>
-   		 <li><a href="#error">NASCAR</a></li>
-    	 <li><a href="#error">COLLEGE BASKETBALL</a></li>
-    	 <li><a href="#error">COLLEGE FOOTBALL</a></li>
-   		 <li><a href="#error">MINOR LEAGUES</a></li>
-   		  <li><a href="#error">RUBY</a></li>
-	</ul> -->
-	
-	
-	
-	<div class="ui-grid-b">
-    <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:160px" >NFL</div></div>
-    <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:160px">NBA</div></div>
-    <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:160px">MLB</div></div>
-	</div><!-- /grid-c -->
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#nfl"  data-theme="c">NFL</a></li>
+			<li><a href="#nba"  data-theme="a">NBA</a></li>
+			<li><a href="#mbl"  data-theme="e">MBL</a></li>
+		</ul>
+	</div><!-- /navbar -->
 		
   		 <div data-role="footer" data-position="fixed">
       	  <div data-role="navbar">
@@ -250,6 +366,11 @@
        	 </div><!-- /navbar -->
 	</div><!-- /footer -->   
 	</div>
+
+
+
+
+
 
 
 	<!-- contact us -->   
@@ -269,9 +390,12 @@
                	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>  	
            	 </ul>
        	 </div><!-- /navbar -->
-	</div><!-- /footer -->
-	   
+	</div><!-- /footer -->	   
 	</div>
+
+
+
+
 
 
 	</div>

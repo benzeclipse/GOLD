@@ -24,53 +24,65 @@
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	 <!-- class for resizing images -->
+	<style>
+		img.fullscreen {
+			max-height: 100%;
+			max-width: 100%;
+		}
+	</style>
 
 </head>
 <body>
 
 
 
-
 	<!-- First Page -->
-	<div data-role="page" id="home" data-filter="true">
+	<div data-role="page" id="home" >
 		
 		<div data-role="header" data-position="fixed" data-theme="b" >
 			<h1>Ticket Hub</h1>
-		</div>
-	<form method="get" action="http://www.google.com/search">
-		<div>
-			<tr><td> <!-- Search Button -->
-				<input type="text" name="q" size="25" maxlength="255" value="" placeholder="enter something" />
-				<input type="submit" value="GO" data-icon="search"/></td></tr>
-			<tr><td align="center" style="font-size:75%">	
-			</td>
-			</tr>
-  		</div>	
-	</form>
-		<div 
-			data-role="content">
-		<div>
-			<a href="#"> <!-- adding achor tags 'link' -->
-				<img src="images/tickets.jpg" align="right"/> <!-- adding image -->
-				<img src="images/nfl.jpeg" align="bottom"/>
-				<div ><a href="#error" align="top"><p> Today's specials!</p></a>
-				<img src="images/ball.jpg" align="bottom"/>
-			  </div>
-			</a>
-		</div>	
+		</div> 
+
+			<!-- search button -->		
+			<div data-role="content">
+			<form method="get" action="http://www.google.com/search">	
+			<fieldset class="ui-grid-a">
+			<div class="ui-block-a">
+      		<input type="text" id="" name="g" value="" placeholder="start searching">
+			</div>
+			<div class="ui-block-b">
+       		<input type="submit" id="" name="" value="GO" data-icon="search">
+			</div>
+			</form>	
+			</div>
 		
-	</div>		
-			<ul data-role="listview" > <!-- List View and data-filter smart search-->
+			<div data-role="content">
+			<img src="images/tickets.jpg" align="right"/>
+			<p align="middle">Voted the #1 ticket!</p>
+			<a href="#facebook"><p align="middle">Like us on Facebook</p></a>
+			</div>
+		
+		 	<ul data-role="listview"  data-theme="e" >
+		 		<li>
+		 			<a href="additem.html" data-ajax="false" >
+		 			<h1>Today's specials!</h1>
+		 			<img src="images/carolina.jpg"
+		 			 alt="Hat" />
+		 			 <p>Order now!</p>
+		 			 </a>
+		 			</li>
+				</ul>
 			
-     <!-- 	<input type="text" name="text1" id="text1" >
-			<p><a href="#favorite" data-role="button" data-icon="search" data-iconpos="right" data-ajax="false" data-theme="d" >Search</a></p> -->
-			
+	
+			<ul data-role="listview" > <!-- List View-->			
 				<li data-role="list-divider">BROWSE NOW</li> <!-- Dividers -->
 				<li><a href="#shopTicket">	<!-- adding header and lower textview w/buttons-->
 					<h3>Shop Tickets</h3>
 					 <p>We have all tickets at discounted prices!</p>
 				</a></li>
-				<li><a href="#error">
+				<li><a href="#sportStuff">
 					<h3>Sport Stuff</h3>
 					 <p>Find all the greatest apparels</p> 
 				<li><a href="#news">
@@ -104,37 +116,30 @@
 			</div>
 			
 			</ul> 
-			<br>
- 			<p><a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false" data-theme="b" >Sign up now!</a></p> <!-- data-role="button" to add a button -->
- 			</br> 
-	  
 		
-  		 <div data-role="footer" data-position="bottom">
+  	 <div data-role="footer" >
       	  <div data-role="navbar">
-         	   <ul>	  
-               	 <li><a href="#" data-icon="refresh" class="ui-btn-active">Refresh</a></li>
+         	   <ul>
+              	  
+               	 <li><a href="#error" data-icon="bars" class="ui-btn-active">Info</a></li>
                	 <li><a href="#links" data-icon="gear">About Us</a></li>
            	 </ul>
        	 </div><!-- /navbar -->
-	</div><!-- /footer --> 
+	</div><!-- /footer -->
+
 	   </div>
 	</div>
 	
-	
-	
-	
+
 	
 	<!-- error page -->   
 	<div data-role="page" id="error" data-id="displayingData" data-add-back-btn="true"> 
-		
 		<div data-role="header" data-position="fixed" data-theme="b" >
 			<h1>Ticket Hub</h1>
-		</div>
-		
+		</div>	
 		<div data-role="content">
 			<p>Sorry, an error has occur!</p>
-		</div>
-			
+		</div>		
   	 <div data-role="footer" data-position="fixed">
       	  <div data-role="navbar">
          	   <ul>
@@ -143,10 +148,29 @@
                	 <li><a href="#links" data-icon="gear">About Us</a></li>
            	 </ul>
        	 </div><!-- /navbar -->
-	</div><!-- /footer -->
-	   
+	</div><!-- /footer -->   
 	</div>
 	
+
+		<!-- Facebook Like-->   
+	<div data-role="page" id="facebook" data-id="displayingData" data-add-back-btn="true"> 
+		<div data-role="header" data-position="fixed" data-theme="b" >
+			<h1>Ticket Hub</h1>
+		</div>	
+		<div data-role="content">
+			<p align="center">Thanks for liking us on Facebook</p>
+		</div>		
+  	 <div data-role="footer" data-position="fixed">
+      	  <div data-role="navbar">
+         	   <ul>
+              	  
+               	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+               	 <li><a href="#links" data-icon="gear">About Us</a></li>
+           	 </ul>
+       	 </div><!-- /navbar -->
+	</div><!-- /footer -->   
+	</div>
+
 
 
 
@@ -163,9 +187,9 @@
 		</div>	
 		
 		<ul data-role="listview" data-inset="true">
-   			<li><a href="#">GOLD APP</a></li>
+   			<li><a href="http://benzeclipse.github.com/GOLD">GOLD APP</a></li>
    			<li><a href="#">BRONZE APP</a></li>
-   			<li><a href="#">GIT</a></li>
+   			<li><a href="https://github.com/benzeclipse/GOLD.git">GIT</a></li>
    			<li><a href="#contactUs">CONTACT US</a></li>
 		</ul>
 		
@@ -183,6 +207,8 @@
 
 
 
+
+
 	<!--Sport News Link -->  
 	<div data-role="page" id="news" data-add-back-btn="true"> 		
 		<div data-role="header" data-position="fixed" data-theme="b" >
@@ -192,12 +218,12 @@
 			<p align="middle">All the lastet sports news!</p>
 		</div>
 		
-		<ul data-role="listview" data-inset="true">
-   			<li><a href="#">NFL</a></li>
-   			<li><a href="#">NBA</a></li>
-   			<li><a href="#">MLB</a></li>
-   			<li><a href="#">MORE!</a></li>
-		</ul>
+	<ul data-role="listview" data-inset="true">
+   			<li><a href="http://www.nfl.com">NFL</a></li>
+   			<li><a href="http://www.nba.com">NBA</a></li>
+   			<li><a href="http://mlb.mlb.com/home">MLB</a></li>
+   			<li><a href="#error">MORE!</a></li>
+		</ul>  
 		
   		 <div data-role="footer" data-position="fixed">
       	  <div data-role="navbar">
@@ -210,37 +236,54 @@
 	</div>
 
 
-	<!--Shop Ticket-->  
+
+
+
+
+
+   <!--Shop Tickets -->  
 	<div data-role="page" id="shopTicket" data-add-back-btn="true"> 		
-		<div data-role="header" data-position="fixed" data-theme="b" >
+		<div data-role="header" data-position="fixed" >
 			<h1>Ticket Hub</h1>
 		</div>	
 		<div data-role="content">
-			<p align="middle">Start Shopping</p>
+			<h3 align="middle"><p>Shop Tickets Now!</p><h3>
 		</div>
-		
-<!--	<ul data-role="listview" data-filter="true" data-filter-reveal="true" >
-    	 <li><a href="#error">NFL</a></li>
-   		 <li><a href="#error">NBA</a></li>
-    	 <li><a href="#error">NHL</a></li>
-    	 <li><a href="#error">MMA</a></li>
-   		 <li><a href="#error">GOLF</a></li>
-   		  <li><a href="#error">TENNIS</a></li>
-   		 <li><a href="#error">NASCAR</a></li>
-    	 <li><a href="#error">COLLEGE BASKETBALL</a></li>
-    	 <li><a href="#error">COLLEGE FOOTBALL</a></li>
-   		 <li><a href="#error">MINOR LEAGUES</a></li>
-   		  <li><a href="#error">RUBY</a></li>
-	</ul> -->
 	
+		<!-- listview with img -->
+		<article data-role="content" >
+		 	<ul data-role="listview" >
+		 	
+		 		<li>
+		 			<a href= "#football">
+		 			<h1>Football</h1>
+		 			<img src="images/nfl.jpg"
+		 			 alt="Min Pin" />
+		 			 <p>Search football tickets.</p>
+		 			 </a>
+		 			</li>
+		 			
+					<li>
+						<a href="#baksetball">
+						<h1>Basketball</h1>
+						<img src="images/nba.jpg"
+						alt="BasketBall" />
+						<p>Search basketball tickets.</p>
+						</a>
+					</li>
+						
+					<li>
+						<a href="#baseball">
+						<h1>Baseball</h1>
+						<img src="images/mlb.jpg"
+						alt="BasketBall" />
+						<p>Search baseball tickets.</p>
+						</a>
+					</li>
+					
+				</ul>
+			</article>
 	
-	
-	<div class="ui-grid-b">
-    <div class="ui-block-a"><div class="ui-bar ui-bar-e" style="height:160px" >NFL</div></div>
-    <div class="ui-block-b"><div class="ui-bar ui-bar-e" style="height:160px">NBA</div></div>
-    <div class="ui-block-c"><div class="ui-bar ui-bar-e" style="height:160px">MLB</div></div>
-	</div><!-- /grid-c -->
-		
   		 <div data-role="footer" data-position="fixed">
       	  <div data-role="navbar">
          	   <ul>	  
@@ -250,6 +293,40 @@
        	 </div><!-- /navbar -->
 	</div><!-- /footer -->   
 	</div>
+
+
+
+		<!--Shop Tickets WallPaper--> 
+		<div data-role="page" id="football">
+		<header data-role="header">
+			<h1>Ticket Hub</h1> 
+			<a href="#shopTicket" data-icon="back">back</a>
+		</header>
+		<img src="images/nfl.jpg" class="fullscreen">  <!-- class for resizing images -->  
+		</div>
+
+	
+		<div data-role="page" id="baksetball">
+		<header data-role="header">
+			<h1>Ticket Hub</h1> 
+			<a href="#shopTicket" data-icon="back">back</a>
+		</header>
+		<img src="images/nba.jpg" class="fullscreen">	 <!-- class for resizing images -->	
+		</div>
+
+
+		<div data-role="page" id="baseball">
+		<header data-role="header">
+			<h1>Ticket Hub</h1> 
+			<a href="#shopTicket" data-icon="back">back</a>
+		</header>
+		<img src="images/mlb.jpg" class="fullscreen">  <!-- class for resizing images -->
+		</div>
+
+
+
+
+
 
 
 	<!-- contact us -->   
@@ -258,20 +335,101 @@
 		<div data-role="header" data-position="fixed" data-theme="b" >
 			<h1>Ticket Hub</h1>
 		</div>
-		
 		<div data-role="content" >
 			<h1><p align="middle">Contact Us</p></h1>
 		</div>
-			
+		
+			<p align="middle">We can be reach at</p><p align="center"><a href="#error">1-800-888-8888</a></p>
+			<p align="middle">or e-mail us at</p><p align="center"><a href="#error">ticketHub@hub.com</a></p>
   	 <div data-role="footer" data-position="fixed">
       	  <div data-role="navbar">
          	   <ul> 
                	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>  	
            	 </ul>
        	 </div><!-- /navbar -->
-	</div><!-- /footer -->
-	   
+	</div><!-- /footer -->	   
 	</div>
+
+
+
+
+	<!--Sport Stuff // Grid -->   
+	<div data-role="page" id="sportStuff" data-add-back-btn="true"> 
+		<div data-role="header" data-position="fixed" data-theme="b" >
+			<h1>Ticket Hub</h1>
+		</div>	
+	
+		<div data-role="fieldcontain">
+			<p align="middle">testing!</p>
+		</div>	
+
+
+
+
+
+
+		<div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Tickets</li>
+						<li>NFL</li>
+						<li>NBA</li>
+						<li>MLB</li>
+				    </ul>
+				</div>
+				
+			
+			<div class="ui-block-b">
+					<ul data-role="listview" data-inset="true">
+						<li data-role="list-divider">Tickets</li>
+						<li> canon 1</li>
+						<li> canon 2</li>
+						<li> canon 3</li>
+				    </ul>
+				</div>	
+				
+				
+				
+				<div class="ui-grid-b">
+						<div class="ui-block-a"><div class="ui-bar ui-bar-b">Photo1</div></div>
+						<div class="ui-block-b">Photo2</div>
+						<div class="ui-block-a">Photo3</div>
+						<div class="ui-block-b">Photo4</div>
+						<div class="ui-block-a">Photo5</div>
+						<div class="ui-block-b">Photo6</div>
+				    </div>
+				</div>
+				
+				
+				
+					
+		
+	</div>
+				
+		
+			
+  	 <div data-role="footer" data-position="bottom">
+      	  <div data-role="navbar">
+         	   <ul>	  
+               	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+               	 <li><a href="#links" data-icon="gear">About Us</a></li>
+           	 </ul>
+       	 </div><!-- /navbar -->
+	</div><!-- /footer -->   
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	</div>
